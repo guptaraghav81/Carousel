@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <style>
+        .arrow{
+             background-color: azure;
+             border: 1px solid black;
+             border-radius: 50%;
+             padding:  10px 19px;
+             cursor: pointer;
+             position: absolute;
+             top: 45%;
+             font-size: 19px;
+             font-weight: bolder;
+             text-align: center;
+            
+             
+        }
+        
+        .slide img{
+            width: 100%;
+            height: 500px;
+        }
+        body{
+            margin: 0px;
+        }
+        .text{
+            position: absolute;
+            bottom: 5px;
+            background-color: rgba(0, 0, 0, 0.669);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: whitesmoke;
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            font-size: larger;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .slide-container{
+            width: 100%;
+            position: relative;
+        }
+        .next{
+            right: 10px;
+        }
+        .prev{
+            left: 10px;
+        }
+        .slide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="slide">
+            <img src="img1.jpg" alt="">
+            <div class="text">Caption 1</div>
+        </div>
+        <div class="slide">
+            <img src="img2.jpg" alt="">
+            <div class="text">Caption 2</div>
+        </div>
+        <div class="slide">
+            <img src="img3.jpg" alt="">
+            <div class="text">Caption 3</div>
+        </div>
+        <div class="slide">
+            <img src="img4.jpg" alt="">
+            <div class="text">Caption 4</div>
+        </div>
+        <span class="arrow prev" onclick="Controller(-1)">&#10094</span>
+        <span class="arrow next" onclick="Controller(1)">&#10095</span>
+    </div>
+    <script src="slider.js"></script>
+</body>
+</html>
